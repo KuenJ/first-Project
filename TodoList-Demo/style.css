@@ -1,0 +1,46 @@
+body {
+  margin: 0px;
+  background-image: url("image/images.jpg");
+  background-repeat: no-repeat; /**그림 여러개반복되지않게 하나만 해주는것 */
+  background-size: cover; /**background를 repeat으로 만들면 작게나오기때문에 다커버해주는것*/
+}
+
+.container {
+  background-color: white;
+  min-height: 100vh; /**vh는 view high? 뭐 그런거다 이것은 내가보이는화면에서 100퍼센트  높이를 채우는의미.*/
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /**박스에 조금명암같은 걸주는 */
+}
+.task-area {
+  border: 1px solid lightgray;
+}
+
+.task-tabs {
+  display: flex;
+  border: 1px solid lightgray; /** 네모난 실선 박스를 만드는것 .border */
+  position: relative;
+}
+
+.task-tabs div {
+  /**task tabs 아래있는 div 에 뭔가지시하는것  padding으로 너비를줌*/
+  padding: 1em;
+}
+
+#under-line {
+  /** 이건 갖다대면 밑에 밑줄쳐지면서 표현되는걸 만드는거임 
+   아래밑줄이생기는거 위치때문에 task-tabs에 포지션을 relative로 해놨다.*/
+  height: 4px;
+  background-color: aqua;
+  position: absolute;
+  width: 80px;
+  left: 0px;
+  top: 50px;
+  padding: 0px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
